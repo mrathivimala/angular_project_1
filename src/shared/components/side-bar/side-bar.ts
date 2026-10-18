@@ -9,8 +9,13 @@ import { SideBarItem } from './side-bar-item/side-bar-item';
 })
 export class SideBar {
   routes=[
-    {name:"Home",path:"/"},
-    {name:"Notes",path:"/notes"},
-    {name:"Trash",path:"/trash"},
+    {path:['/'],name:'Home'},
+    {path:['/','notes'],name:'Notes'},
+    {path:['/','trash'],name:'Trash'},
+    {path:['/','test'],name:'Test'},
   ]
+name:string = "Rathi"
+  if(name: string){
+name=name+"vimala"
+  }
 }

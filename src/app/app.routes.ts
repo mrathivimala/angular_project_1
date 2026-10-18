@@ -4,6 +4,7 @@ import { Notes } from './notes/notes';
 import { Trash } from './trash/trash';
 import { Invalid } from './invalid/invalid';
 import { Note } from './notes/note/note';
+import { Test } from '../learning/test/test';
 
 export const routes: Routes = [
     { path: '', component: Home },
@@ -18,6 +19,6 @@ export const routes: Routes = [
             ]
     },
     { path: 'trash', component: Trash },
-    { path: 'test', redirectTo: 'notes', pathMatch: 'full' },
+    { path: 'test', component:Test },
     { path: '**', component: Invalid },//wildcard route - should always in the last
 ];

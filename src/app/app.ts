@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
 
 import { FormsModule } from '@angular/forms';
-import { Header } from '../learning/header/header';
+
 import { SideBar } from '../shared/components/side-bar/side-bar';
 import { User } from '../shared/models/user.model';
 
