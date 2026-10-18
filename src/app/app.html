@@ -1,24 +1,20 @@
 <nav class="fixed  top-0 w-full z-50">
   <ul class="flex text-blue-50 w-full px-5 py-5 justify-between bg-blue-500 shadow shadow-blue-900">
     <li class="flex gap-2 items-center">
-      <img src="/favicon.ico" alt="" class="size-12"/>
+      <img src="/favicon.ico" alt="" class="size-12" />
       <h1 class="font-semibold text-xl">My Notes</h1>
-      </li>
-    <li class="items-center"><h1 class="font-semibold text-xl py-5">Welcome, Rathi</h1></li>
-    
+    </li>
+    <li class="items-center">
+      <h1 class="font-semibold text-xl py-5">Welcome, Rathi</h1>
+    </li>
+
   </ul>
 </nav>
 <section class="mt-27 flex">
   <nav class="w-3xs min-w-3xs sticky top-27 text-blue-50 bg-cyan-400 h-[calc(100vh-6.75rem)] py-5">
-   <app-side-bar></app-side-bar>
+    <app-side-bar></app-side-bar>
   </nav>
   <main class="p-5">
-    <p class = "{{isEnabled?'text-red-500':'text-cyan-700'}}">
-
-  
-   {{isEnabled?header:user.name}}
-  </p>
-<input type="text"  [(ngModel)]="header"  class="rounded-2xl border p-2 border-gray-500 hover:border-gray-800-100" >
-
+    <router-outlet></router-outlet>
   </main>
 </section>

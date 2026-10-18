@@ -1,22 +1,31 @@
 import { Component, signal } from '@angular/core';
-import { SideBar } from '../shared/side-bar/side-bar';
+
 import { FormsModule } from '@angular/forms';
-//import { RouterOutlet } from '@angular/router';
+import { Header } from '../learning/header/header';
+import { SideBar } from '../shared/components/side-bar/side-bar';
+import { User } from '../shared/models/user.model';
+
+import { RouterOutlet } from '@angular/router';
 
 
 @Component({
   selector: 'app-root',
-  imports: [SideBar,FormsModule ],
+  imports: [SideBar, FormsModule,RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
   protected readonly title = signal('My First Example');
-  isEnabled=true;
-  header:string="Rathi Vimala";
-  user={
-    name:"Rathi",Age:32
+
+  heading="header from main app";
+
+  user:User={
+    name:"Rathi",gender:"female",age:33
   }
-
-
+  
+ Onsuccess($e:User)
+ 
+ {
+alert("is happend"+ $e.name)
+ }
 }
