@@ -13,13 +13,12 @@
    <app-side-bar></app-side-bar>
   </nav>
   <main class="p-5">
-    Test <br/>Test <br/>Test <br/>Test <br/>Test <br/>Test <br/>Test
-     <br/>Test <br/>Test <br/>Test <br/>Test <br/>Test <br/>Test <br/>Test 
-     <br/>Test <br/>Test <br/>Test <br/>Test <br/>Test <br/>Test <br/>Test 
-     <br/>Test <br/>Test <br/>Test <br/>Test <br/>Test <br/>Test <br/>Test 
-     <br/>Test <br/>Test <br/>Test <br/>Test <br/>Test <br/>Test <br/>Test <br/>
-     Test <br/>Test <br/>Test <br/>Test <br/>Test <br/>Test <br/>Test <br/>Test <br/>
-     Test <br/>Test <br/>Test <br/>Test <br/>Test <br/>Test <br/>
-     Test <br/>Test <br/>Test <br/>Test <br/>
+    <p class = "{{isEnabled?'text-red-500':'text-cyan-700'}}">
+
+  
+   {{isEnabled?header:user.name}}
+  </p>
+<input type="text" [value]="header" class="rounded-2xl border p-2 border-gray-500 hover:border-gray-800-100" (change)="onChange($event)" >
+
   </main>
 </section>
