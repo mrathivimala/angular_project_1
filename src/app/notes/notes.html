@@ -1,12 +1,23 @@
-<section class="border-2 border-red-500"> 
-<p>notes works!</p>
-    <div class="border-2 border-blue-500">
+<form #detailForm="ngForm" (ngSubmit)="OnFormSubmit(detailForm)">
+    <input required type="text" #userName="ngModel" name="name" class="border rounded-md p-2"
+        [(ngModel)]="details.name">
 
-<router-outlet></router-outlet>
+    @if(userName.dirty && !userName.valid){
+    <p class="text-red-500 font-bold">Required Feild</p>
+    }
+    <div ngModelGroup="detailViewGroup">
+
+        <input type="number" min="20" name="age" #userAge="ngModel" class="border rounded-md p-2" [(ngModel)]="details.age">
+        @if(userAge.dirty && !userAge.valid){
+    <p class="text-red-500 font-bold">min age 20</p>
+    }
+        <select name="gender" [(ngModel)]="details.gender" class="border rounded-md p-2">
+            <option value="">--Select One--</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
     </div>
-</section>
+    <button type="submit" [disabled]="!detailForm.valid"  class="border rounded-md p-2 bg-red-500 text-white disabled:opacity-20">Submit</button>
+</form>
 
-
-
-
-
+{{detailForm.value | json}}
