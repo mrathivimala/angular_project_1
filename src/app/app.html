@@ -18,7 +18,7 @@
   
    {{isEnabled?header:user.name}}
   </p>
-<input type="text" [value]="header" class="rounded-2xl border p-2 border-gray-500 hover:border-gray-800-100" (change)="onChange($event)" >
+<input type="text"  [(ngModel)]="header"  class="rounded-2xl border p-2 border-gray-500 hover:border-gray-800-100" >
 
   </main>
 </section>

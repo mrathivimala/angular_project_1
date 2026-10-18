@@ -18,10 +18,5 @@ export class App {
     name:"Rathi",Age:32
   }
 
-  onChange($e:Event){
 
-this.header=($e.target as HTMLInputElement).value;
-
-
-  }
 }
